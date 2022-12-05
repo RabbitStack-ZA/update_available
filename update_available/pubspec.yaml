@@ -2,6 +2,7 @@ name: update_available
 description: Know if there's any update for your Flutter app, based on published versions.
 version: 2.1.0
 repository: https://github.com/mateusfccp/update_available/tree/master/update_available
+publish_to: none
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -10,7 +11,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  update_available_android: ^2.1.0
+  update_available_android: 
+    git:
+      url: https://github.com/RabbitStack-ZA/update_available.git
+      ref: pre_federation
+      path: ./update_available_android
   update_available_ios: ^2.1.0
   update_available_platform_interface: ^2.1.0
 
